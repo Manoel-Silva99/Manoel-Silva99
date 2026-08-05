@@ -1,0 +1,294 @@
+#  No primeiro semestre da faculdade, iniciei minha jornada na programação começando pelo Python, no qual desenvolvi o conhecimento básico ao longo das aulas, e vou procurar colocar neste meu potifólio os projetos nos quais eu mais me orgulhei de ter feito, de acordo com meu respectivo conhecimento em cada situação.
+#  Os projetos serão dados em ordem cronológica, seguindo uma linha de crescimento do meu conhecimento técnico e criativo dentro da área da linguagem.
+#  É de importância ressaltar, que utilizamos a plataforma do Google Colab, devido à sua facildiade de acesso à nuvem, e sua maior facilidade de uso para iniciantes na programação. Além disso, optei por não modificar nenhum código nem mesmo para obserações que queria ter feito, ou correções de erros.
+# Infelizmente, estou criando este portifóio apenas agora que estou começando o segundo semestre, portanto, este não será talvez tão adequado quanto o restante.
+
+# PROJETO Nº1 - Programa de aprendizado para a matéria de CONJUNTOS NUMÉRICOS
+--> Sendo meu primeiro projeto, minha intenção fictícia seria a criação de um programa (não necessariamente um site), muito específico para dúvidas comuns de estudantes da área.
+--> Nesta ocasião, era de meu conhecimento apenas coisas muito básicas como o print e o input, a função "def" e a forma como foi utilizada era de fora de meu conhecimento, apenas apliquei para facilitar minha atividade.
+--> Uma ideia de uso minha, seria algo semelhante ao programa que fiz para professores, como uma forma de substituir o uso de slides em explicações. Claro, foi apenas uma ideia.
+
+
+#A ideia básica foi fazer um programa que te explique o conteúdo de Conjuntos Numéricos com base no conteúdo que você escolher.
+#Como não aprendemos representações gráficas, ele é codificado apenas por texto.
+
+#Primeiramente, dei um comando para Entrada de Dados, demonstrando as opções que a pessoa pode ter, e pedindo-a para escolher.
+#O comando "def" foi utilizado para facilidade na repetição das linhas.
+def lógica_matemática(Teoria, fórmula):
+    print(f'Digite "{Teoria}" para aprender sobre {fórmula}.')
+lógica_matemática('Lógica', 'a base-teórica de Lógica Proposicional')
+lógica_matemática('Linguagem','como utilizar a linguagem do Portugûes e da Matemática em lógica proposicional.')
+lógica_matemática('Negação','como funciona a Negação de uma Proposição')
+lógica_matemática('Características','frases que não poderão ser consideradas proposições')
+lógica_matemática('Proposições Compostas','a base teórica de Proposições Compostas')
+lógica_matemática('Conectivo E','como utilizar o Conectivo E (^)')
+lógica_matemática('Conectivo OU', 'como utilizar o Conectivo OU (v)')
+lógica_matemática('Conectivo OU...OU','como utilizar o Conectivo OU...OU(⊻)')
+lógica_matemática('Conectivo Condicional','como utilizá-lo')
+lógica_matemática('Conectivo Bicondicional','como utilizá-lo')
+lógica_matemática('Regra de Precedência',' como montar a Tabela Verdade')
+lógica_matemática('Tipos de Proposição composta', 'como são atribuidas')
+lógica_matemática('Subproposições','as subproposições da Tautologia')
+lógica_matemática('Exercícios','a parte prática da matéria')
+
+#Agora, partindo para o processamento, defini as variáveis para cada texto que a pessoa inserir.
+#Foi utilizado "if-elif-else" para a parte de Saída de Dados.
+
+#Aula 06
+Teoria_lógica = f"\n    ## LÓGICA ##\n   A lógica proposicional (ou sentencial) é um ramo da lógica formal que estuda sentenças declarativas, chamadas de proposições, que podem ser valoradas como verdadeiras (V) ou falsas (F), mas não ambas."
+Linguagem = f"\n    ## LINGUAGEM ##\n   Dentro de Lógica Proposicional, podemos denominar a frase de duas maneiras distintas, porém com o mesmo significado.\n     Exemplo:\n     Três não é sete (3 ≠ 7)\n     Três é maior que sete (3 > 7)\n     Sete é um número natural (7 ∈ ℕ)"
+Negação = f"\n  ## NEGAÇÃO ##\n    Ao negar uma proposição, alteramos seu valor lógico e denotamos por ~p.\n    Exemplo: p: Três não é sete (3≠7) / Três é maior do que sete (3>7)\n    ~p: Três é igual a sete (3 = 7) / Três é menor ou igual a sete (3 ≤ 7)"
+Caracteristicas = f"\n  ## CARACTERÍSTICAS ##\n    Não poderão ser consideradas proposições:\n   - Frases incompletas (Ex: 3+5)\n   - Frases interrogativas (Ex: José gosta de português?)\n   - Icógnitas onde não é possível atribuir valor lógico V ou F (Ex: X + 5 = 7,)"
+Proposições_Compostas = f"\n    ## PROPOSIÇÕES COMPOSTAS ##\n   A partir de proposições simples podemos compor outras proposições, utilizando conectivos. Assim, teremos proposições compostas."
+Conectivo_E = f"\n    ## CONECTIVO E (^) ##\n    Resumo: Utilizando o conectivo e(^), estabeleceremos uma conjunção entre duas proposições simples.\n    Representação: p^q (Entende-se que se declara ao mesmo tempo)\n    Propriedade: A conjunção p^q é verdadeira somente se p e q são ambas verdadeiras."
+#aula 07
+Conectivo_OU = f"\n    ## CONECTIVO OU (v) ##\n   Resumo: Ao relacionar duas preoposições com o conectivo ou(v), estabelecemos uma disjunção entre duas preposições p e q.\n   Representação: p v q (Entende-se que se declara pelo menos uma das asserções p e q).\n   Propriedade: A disjunção p v q é verdadeira quando pelo menos uma das preposições é verdadeira. Se ambas forem falsas, p v q é falsa."
+Conectivo_OU_OU = f"\n     ## CONECTIVO OU...OU (⊻) ##\n    Resumo: Ao relacionar duas proposições por meio da disjunção exclusiva, estabelecemos uma relação de “ou...ou” entre p, q.\n    Representação: p⊻q.\n    Propriedade: A disjunção exclusiva de duas sentenças é formada pelo uso duplo da disjunção ou, uma vez antes de cada proposição. Se ambas forem verdadeiras ou ambas forem falsas p ⊻ q será falsa."
+Conectivo_Condicional = f"\n    ## CONECTIVO CONDICIONAL (→) ##\n    Resumo: Ao relacionar duas proposições por meio da condicional (→), estabelecemos uma relação condicional de “se...então” entre p e q.\n    Representação: p→q\n    Propriedade: A condicional de duas sentenças é formada pelo uso de “se...então” antes de cada uma delas. O condicional simples p →q só é falso quando p é verdadeira e q é falsa."
+Conectivo_Bicondicional = f"\n    ## CONECTIVO BICONDICIONAL (↔) ##\n    Ao relacionar duas proposições por meio da bicondicional (↔), estabelecemos uma relação condicionar de 'se e somente se' entre p e q.\n    Representação: p↔q\n    Propriedade: O bicondicional de duas sentenças é formado pelo uso de “se e somente se” entre as duas proposições. O bicondicional é verdadeiro quando p e q têm o mesmo valor, ou seja, são ambos verdadeiros ou são ambos falsos."
+#aula 08
+Regra_Precedência = f"\n    ## REGRA DE PRECEDÊNCIA ##\n   PASSO A PASSO\n 1º Construa a tabela verdade (nº de linhas é 2^n, em que n é a quantidade de proposições)\n 2º Resolva os parênteses e colchetes\n 3º Aplique as negações (~)\n 4º Resolva as conjunções e disjunções na ordem em que aparecem (“e”,“ou”, “ou...ou”)\n 5º Resolva os condicionais simples (→)\n 6º Resolva os bicondicionais (↔)"
+Tipo_Proposição_Composta = f"\n    ## TIPOS DE PROPOSIÇÃO COMPOSTA ##\n   1° Tautologia: proposição composta cuja ultima coluna da tabela verdade (resultado do cálculo proposicional) é composta somente por “V”.\n   2° Contradição: proposição composta cuja última coluna da tabela verdade (resultado do cálculo proposicional) é composta somente por “F”.\n   3° Contingência: proposição composta cuja última coluna da tabela verdade (resultado do cálculo proposicional) é composta por “V” e “F”."
+Subproposições = f"\n   ## SUBPROPOSIÇÕES ##\n     Dentro da tautologia, podemos ter duas subproposições diferentes entre si, sendo elas:\n    1° Implicação: Dizemos que, P implica em Q, isto é, P ⇒ Q , quando, P → Q, é uma tautologia.\n    2° Equivalência: Dizemos que, P equivale a Q, isto é, P ⟺ Q , quando P ↔ Q , é uma tautologia."
+
+
+lógica_proposicional = input('  Digite o que você quer saber sobre lógica proposicional: ').upper()
+
+#Foi usado "upper" para deixar o texto inteiro que a pessoa escrever em maiúsculo. Assim, caso a pessoa escreva alguma letra errada em maiusculo, ele funcionará da mesma forma.
+#Agora, para a Saída de Dados, utilizamos o "if-elif-else" para codificar qual assunto a pessoa quer aprender
+#Por fim, o "print" faz a demonstração do conteúdo solicitado.
+if lógica_proposicional == "LÓGICA":
+    print(Teoria_lógica)
+elif lógica_proposicional == "LINGUAGEM":
+    print(Linguagem)
+elif lógica_proposicional == "NEGAÇÃO":
+    print(Negação)
+elif lógica_proposicional == "CARACTERÍSTICAS":
+    print(Caracteristicas)
+elif lógica_proposicional == "PROPOSIÇÕES COMPOSTAS":
+    print(Proposições_Compostas)
+elif lógica_proposicional == "CONECTIVO E":
+    print(Conectivo_E)
+elif lógica_proposicional == "CONECTIVO OU":
+    print(Conectivo_OU)
+elif lógica_proposicional == "CONECTIVO OU...OU":
+    print(Conectivo_OU_OU)
+elif lógica_proposicional == "CONECTIVO CONDICIONAL":
+    print(Conectivo_Condicional)
+elif lógica_proposicional == "CONECTIVO BICONDICIONAL":
+    print(Conectivo_Bicondicional)
+elif lógica_proposicional == "REGRA DE PRECEDÊNCIA":
+    print(Regra_Precedência)
+elif lógica_proposicional == "TIPOS DE PROPOSIÇÃO COMPOSTA":
+    print(Tipo_Proposição_Composta)
+elif lógica_proposicional == "SUBPROPOSIÇÕES":
+    print(Subproposições)
+elif lógica_proposicional == "EXERCÍCIOS":
+  nome = input('Digite seu nome: ')
+  print(f'Prazer, {nome}! Este jogo contém 5 perguntas nos quais cada pergunta vale 10 pontos. Boa sorte!\n')
+  exercicio_1 = input('1) Digite aqui, em formato de texto: 9 >= √9').upper()
+  if exercicio_1 == 'NOVE É MAIOR OU IGUAL À RAÍZ QUADRADA DE NOVE':
+    pts1 = 10
+    print('PARABÉNS! VOCÊ ACERTOU! PRÓXIMA: ')
+    print('_______________________________________________________\n')
+  else:
+    print('Infelizmente, você errou! :(\n Reposta correta: "Nove é maior ou igual à Raíz quadrada de Nove"')
+    print('_______________________________________________________\n')
+    pts1 = 0
+  exercicio_2 = input('2) A frase "X + 5 = 7" é considerada uma proposição? (sim ou não): ').upper()
+  if exercicio_2 == 'NÃO':
+    pts2 = pts1 + 10
+    print('PARABÉNS! VOCÊ ACERTOU! PRÓXIMA: ')
+    print('_______________________________________________________\n')
+  else:
+    print('Infelizmente, você errou! :(\n A frase não pode ser considerada uma proposição pois, devido à icógnita, não é possível atribuir valor Verdadeiro ou Falso à frase.')
+    print('_______________________________________________________\n')
+    pts2 = pts1 + 0
+  exercício_3 = input('3) (9>5 ^ 7>8) resultará em V ou F?: ').upper()
+  if exercício_3 == 'V':
+    pts3 = pts2+10
+    print('PARABÉNS! VOCÊ ACERTOU! PRÓXIMA: ')
+    print('_______________________________________________________\n')
+  else:
+    print('Infelizmente, você errou! :(\n Resposta correta: VERDADEIRO')
+    print('_______________________________________________________\n')
+    pts3 = pts2 + 0
+  exercício_4 = input('4) (3>6 v 18>1) resultará em V ou F?: ').upper()
+  if exercício_4 == 'V':
+    pts4 = pts3+10
+    print('PARABÉNS! VOCÊ ACERTOU! PRÓXIMA: ')
+    print('_______________________________________________________\n')
+  else:
+    print('Infelizmente, você errou! :(\n Resposta correta: VERDADEIRO')
+    print('_______________________________________________________\n')
+    pts4 = pts3 + 0
+  exercício_5 = input('5) Qual é o único resultado possível do conectivo condicional (→) em que o resultado será FALSO? (ex: x se então y = z)').upper()
+  if exercício_5 == 'V SE ENTÃO F = F':
+    print('PARABÉNS! VOCÊ ACERTOU!\n CONFIRA SEU RESULTADO: ')
+    print('_______________________________________________________\n')
+    pts5 = pts4 + 10
+  else:
+    print('Infelizmente, você errou! :(\n Resposta correta: V se então F = F\n CONFIRA SEU RESULTADO: ')
+    print('_______________________________________________________\n')
+    pts5 = pts4 + 0
+  print(f'Você tirou um total de {pts5}/50 pontos! Meus parabéns, {nome}! Obrigado por jogar!')
+else:
+    print('Nome digitado incorretamente')
+
+
+
+
+# PROJETO Nº2 - ENEM TIMING
+--> Descrição do projeto dentro do código;
+--> Ressalto, adicionalmente, que o objetivo seria um SIMULADOR tendo um TIMING como diferencial para aúxilio do estudante, era de minha vontade utilizar IA para comentários acerca dos erros nas questões e do tempo para cada questão, adicionando também possibildiades de melhorias, porém, isso era extremamente fora do meu conhecimento (e tempo, pois era uma atividade).
+
+"""ENEM TIMING
+
+Automatically generated by Colab.
+
+Original file is located at
+    https://colab.research.google.com/drive/10BYf7JQokv1CjPt3YskXnhzWMcVTMdpY
+"""
+
+#ENEM Timing
+
+# Algo que precisei ano passado durante meus estudos, foi um controlador de tempo de prova para o ENEM
+
+# Durante o ENEM, é necessário um controle de tempo por questão que você tem para fazer a prova, caso contrário, sobra muitas questões para pouco tempo no final da prova, gerando ansiedade, afobação, medo, etc.
+
+# O programa "ENEM Timing" calcula o tempo médio por questão que o estudante utiliza para resolver questões do ENEM.
+
+# O programa visa ajudar o estudante a simular se o seu tempo de prova está bom se comparado ao recomendado no ENEM.
+
+# O ideal seria com as questões, pois já teriamos a dificuldade e poderiamos calcular o tempo no próprio site, mas como isso não é possível, tive que solicitar.
+
+# (As questões e o tempo máximo foram dividias por 10 para ser mais rápida a simulação deste programa)
+
+# Atribuições:
+
+  # questões fáceis: max 1min e 30s
+  # questões médias: max 2min
+  # questões difíceis: max 3min
+
+  # questão 1 a 3 = fácil
+  # questão 4 a 6 = médio
+  # questão 7 a 9 = difícil
+
+print('** ENEM Timing **')
+print('controle o seu tempo por questão para te auxiliar durante a prova')
+
+nome = input('Digite o seu nome: ')
+
+qual_dia = int(input(f'{nome}, digite 1 para começar a simulação: '))
+i = 1
+faceis = []
+medias = []
+dificeis = []
+if qual_dia == 1:
+# 3 questões faceis: 4min e 30 segundos
+# 3 questões medias: 6 min
+# 3 questões dificeis: 9 min
+# Tempo total recomendado: 19,5 minutos
+  print(f'\nDigite o tempo das questões em segundos, ex: 3 minutos = 180, ou, 1 minuto e meio = 90\n')
+  print(f'')
+  while i <= 3:
+    print('_______________________________________________________________________________________________')
+    tempo = int(input(f'Tempo da {i}ª questão (ex: 90): '))
+    if tempo > 90:
+      print(f'{nome}, você demorou demais para fazer essa questão. Como ela é fácil, você deve se agilizar para que não precise chutar questões mais a frente.')
+      faceis.append(tempo)
+      i +=1
+    else:
+      print(f'Você foi bem nessa!')
+      faceis.append(tempo)
+      i+=1
+  while i <=6:
+    print('________________________________________________________________________________________________')
+    tempo = int(input(f'Tempo da {i}ª questão (ex: 120): '))
+    if tempo > 120:
+      print(f'{nome}, você demorou demais para fazer essa questão. Como ela é média, você deve se agilizar para que não precise chutar questões mais a frente.')
+      medias.append(tempo)
+      i +=1
+    else:
+      print(f'Você foi bem nessa!')
+      medias.append(tempo)
+      i+=1
+  while i <= 9:
+    print('________________________________________________________________________________________________')
+    tempo = int(input(f'Tempo da {i}ª questão (ex: 180): '))
+    if tempo > 180:
+      print(f'{nome}, você demorou demais para fazer essa questão. Como ela é difícil, você pode optar por chutar ela, ou, não perder tanto tempo tentando resolvê-la.')
+      dificeis.append(tempo)
+      i +=1
+    else:
+      print(f'Você foi bem nessa!')
+      dificeis.append(tempo)
+      i+=1
+# utilizei o append anteriormente para separar os tempos de cada dificuldade
+# e agora utilizarei o extend para criar uma lista própria com todos os tempos
+tempo_total = []
+tempo_total.extend(faceis+medias+dificeis)
+soma_total = 0
+for i in tempo_total:
+  soma_total += i
+soma = soma_total // 60
+# agora, somei todos os tempos totais e dividi por 60, conseguindo a soma do valor em minutos
+# como o tempo recomendado da prova é de 19,5 minutos, fiz if e else para distinguir
+if soma > 19.5:
+  print(f'\nVocê deve se esforçar mais, pois seu tempo de prova não está dentro do recomendado.')
+  print(f'Seus tempos durante a prova:\n Faceis: {tempo_total[0:3]}\n Medias: {tempo_total[3:6]}\n Dificeis: {tempo_total[6:9]}')
+  print(f'Você levou {soma} minutos para fazer a prova. Tempo máximo recomendado: 19,5 minutos.')
+else:
+  print(f'Seu tempo de prova está bom! Mas não se acomode, estamos sempre propícios a evoluir!')
+  print(f'Seus tempos durante a prova:\n Faceis: {tempo_total[0:3]}\n Medias: {tempo_total[3:6]}\n Dificeis: {tempo_total[6:9]}')
+  print(f'Você levou {soma} minutos para fazer a prova. Tempo máximo recomendado: 19,5 minutos.')
+
+
+
+PROJETO Nº3 - PROGRAMA PARA EDITAR LISTA DE CONTATOS
+--> Aqui, já tendo avançado significamente no meu domínio do Python, lembro de ter tido bastante orgulho de ter feito um programa minimamente funcional para o objetivo, notando meu avanço constante na programação.
+
+
+telefones = {}
+
+print('Digite 1 para cadastrar contatos')
+print('Digite 2 para buscar contatos')
+print('Digite 3 para alterar telefone')
+print('Digite 4 para remover contatos')
+print('Digite 5 para listar contatos')
+print('Digite 0 para finalizar processo')
+
+while True:
+  acao = int(input('\nDisque a ação desejada: '))
+
+  if acao == 1:
+    nome = input('Digite o nome do contato: ').capitalize()
+    numero = int(input('Digite seu telefone: '))
+    telefones[nome] = numero
+  elif acao == 2:
+    busca = input('Digite o nome do contato para busca: ').capitalize()
+    if busca in telefones:
+      print(f'Numero do {busca}: {telefones[busca]}')
+    else:
+      print('Nome não cadastrado')
+  elif acao == 3:
+    qual = input('Digite o nome do contato que deseja alterar telefone: ').capitalize()
+    if qual in telefones:
+      numero_novo = int(input('Digite o novo numero do contato: '))
+      telefones[qual] = numero_novo
+      print(f'Novo número do {qual}: {telefones[qual]}')
+    else:
+      print('Nome não cadastrado')
+  elif acao == 4:
+    nome_remov = input('Digite o nome do contato para remover: ').capitalize()
+    if nome_remov in telefones:
+      del telefones[nome_remov]
+      print('Contato removido com sucesso!')
+    else:
+      print('Nome não cadastrado')
+  elif acao == 5:
+    print(telefones)
+  elif acao == 0:
+    break
+  else:
+    print('Número incorreto')
